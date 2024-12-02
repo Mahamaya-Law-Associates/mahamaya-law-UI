@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { useFormik } from 'formik';
+import { useFormik } from 'formik'; 
 import * as Yup from 'yup';
 import { useRouter } from 'next/navigation'; // Use next/navigation in app directory
 
@@ -89,22 +89,16 @@ const BlogCreation = () => {
             return;
         }
 
-        const formData = new FormData();
-        formData.append('file', file);
-        formData.append('upload_preset', 'blogimages');
-        formData.append('cloud_name', 'dtmybk1ss');
-
-        // Upload image to Cloudinary
-        axios.post('https://api.cloudinary.com/v1_1/dtmybk1ss/image/upload', formData)
-            .then((result) => {
-                toast.success('Upload successful');
-                setPreviewImage(result.data.url);
-                formik.setFieldValue('image', result.data.url);
-            })
-            .catch((err) => {
-                toast.error('Upload failed');
-                console.error(err);
-            });
+        var reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+        reader.onload = () => {
+            console.log(reader.result); //base64encoded string
+            setPreviewImage(reader.result);
+            formik.setFieldValue('image', reader.result);
+        }
+        reader.onerror = error => {
+            console.error("Error: ", error);
+        }
     };
 
     // Handle blog deletion
@@ -198,7 +192,7 @@ const BlogCreation = () => {
                                 <div className="text-red-500 text-sm">{formik.errors.image}</div>
                             ) : null}
 
-                            {previewImage && (
+                            {previewImage && previewImage != null ? (
                                 <div className="mt-4">
                                     <img
                                         src={previewImage}
@@ -206,7 +200,7 @@ const BlogCreation = () => {
                                         className="w-full h-48 object-cover rounded-md border"
                                     />
                                 </div>
-                            )}
+                            ) : null}
                         </div>
                     </div>
 
