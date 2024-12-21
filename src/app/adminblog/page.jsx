@@ -36,7 +36,7 @@ const BlogCreation = () => {
 
     // Fetch all blogs
     const fetchBlogs = () => {
-        axios.get('http://mahamaya-law.vercel.app/blog/getall')
+        axios.get('https://mahamaya-law.vercel.app/blog/getall')
             .then((res) => {
                 setBlogs(res.data);
             })
@@ -54,7 +54,7 @@ const BlogCreation = () => {
         validationSchema: BlogSchema,
         onSubmit: async (values) => {
             try {
-                await axios.post('http://mahamaya-law.vercel.app/blog/add', values, {
+                await axios.post('https://mahamaya-law.vercel.app/blog/add', values, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -104,7 +104,7 @@ const BlogCreation = () => {
 
     // Handle blog deletion
     const deleteBlog = (id) => {
-        axios.delete(`http://mahamaya-law.vercel.app/blog/delete/${id}`, {
+        axios.delete(`https://mahamaya-law.vercel.app/blog/delete/${id}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
