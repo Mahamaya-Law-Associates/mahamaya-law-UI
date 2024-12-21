@@ -8,7 +8,7 @@ const AboutUs = () => {
           
           {/* Image Section */}
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-            <img
+            <Image
               className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
               src="images/Mahamaya_Logo.png"
               alt="About Us"

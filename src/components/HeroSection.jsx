@@ -5,7 +5,7 @@ const HeroSection = () => {
     <div className="relative bg-gray-900">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           className="w-full h-full object-cover opacity-50"
           src="images/Lawfirm_bg.jpg"
           alt="Legal Advisory Background"
