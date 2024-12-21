@@ -194,7 +194,7 @@ const BlogCreation = () => {
 
                             {previewImage && previewImage != null ? (
                                 <div className="mt-4">
-                                    <img
+                                    <Image
                                         src={previewImage}
                                         alt="Preview"
                                         className="w-full h-48 object-cover rounded-md border"
@@ -230,7 +230,7 @@ const BlogCreation = () => {
                                 className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
                             >
                                 <div className="relative">
-                                    <img
+                                    <Image
                                         src={blog.image}
                                         alt={blog.title}
                                         className="w-full h-64 object-cover"

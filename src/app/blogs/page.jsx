@@ -56,7 +56,7 @@ const Blog = () => {
                                 >
                                     {/* Blog Image */}
                                     <div className="relative">
-                                        <img
+                                        <Image
                                             src={blog.image}
                                             alt={blog.title}
                                             className="w-full h-auto object-contain"

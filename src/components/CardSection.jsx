@@ -56,7 +56,7 @@ const CardSection = () => {
               key={index}
               className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out hover:shadow-2xl"
             >
-              <img
+              <Image
                 src={card.image}
                 alt={card.title}
                 className="h-56 w-full object-cover transition duration-300 ease-in-out"
@@ -79,7 +79,7 @@ const CardSection = () => {
           <a 
           href="/contactus"
           className="text-4xl sm:text-5xl lg:text-3xl font-bold text-white inline-block px-6 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-md shadow-md transform hover:scale-105 transition duration-300 ease-in-out"
-            >"Get in touch with us"
+            >Get in touch with us
             </a>
 
           

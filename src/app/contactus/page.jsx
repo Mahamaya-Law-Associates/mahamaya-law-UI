@@ -18,7 +18,7 @@ const ContactUs = () => {
       <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {/* By Phone Section */}
         <div className="bg-white p-8 shadow-xl rounded-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-          <img
+          <Image
             src="https://via.placeholder.com/100"
             alt="Phone Icon"
             className="mb-4 w-20 h-20"
@@ -34,7 +34,7 @@ const ContactUs = () => {
 
         {/* By Email Section */}
         <div className="bg-white p-8 shadow-xl rounded-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-          <img
+          <Image
             src="https://via.placeholder.com/100"
             alt="Email Icon"
             className="mb-4 w-20 h-20"
@@ -53,7 +53,7 @@ const ContactUs = () => {
 
         {/* By Address Section */}
         <div className="bg-white p-8 shadow-xl rounded-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-          <img
+          <Image
             src="https://via.placeholder.com/100"
             alt="Address Icon"
             className="mb-4 w-20 h-20"
