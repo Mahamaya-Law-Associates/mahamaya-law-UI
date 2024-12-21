@@ -19,7 +19,7 @@ const Login = () => {
       setLoading(true); // Start loading when form is submitted
 
       try {
-        const result = await axios.post('http://localhost:4200/user/authenticate', values);
+        const result = await axios.post('http://mahamaya-law.vercel.app/user/authenticate', values);
         toast.success('Login successful');
         localStorage.setItem('token', result.data.token); // Store token in localStorage
         router.push('/adminblog'); // Redirect to another page

@@ -6,7 +6,7 @@ const Blog = () => {
     const [blogs, setBlogs] = useState([]);
 
     const fetchBlogs = () => {
-        axios.get('http://localhost:4200/blog/getall')
+        axios.get('http://mahamaya-law.vercel.app/blog/getall')
             .then((res) => {
                 setBlogs(res.data);
             })
