@@ -1,5 +1,4 @@
 // src/components/AboutUs.js
-import Image from 'next/image';
 import React from "react";
 
 const AboutUs = () => {
@@ -11,10 +10,10 @@ const AboutUs = () => {
           Justice Served, Your Rights Protected
         </h2>
         <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          Welcome to Mahamaya Law Association
+          Welcome to Mahamaya Law
         </p>
         <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          At Mahamaya Law Association, we provide comprehensive legal solutions tailored to your unique needs. From personal legal matters to business disputes, our expertise guides you to justice.
+          At Mahamaya Law, we provide comprehensive legal solutions tailored to your unique needs. From personal legal matters to business disputes, our expertise guides you to justice.
         </p>
       </div>
 
@@ -45,8 +44,8 @@ const AboutUs = () => {
 
       {/* Image Section */}
       <div className="mt-12 flex items-center justify-center">
-        <Image
-          src="images/law_nobg.png"
+        <img
+          src="/images/law_nobg.png"
           alt="Law Firm"
           className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
         />

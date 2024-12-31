@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 const AboutUs = () => {
   return (
@@ -9,7 +8,7 @@ const AboutUs = () => {
           
           {/* Image Section */}
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-            <Image
+            <img
               className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
               src="images/Mahamaya_Logo.png"
               alt="About Us"
@@ -22,13 +21,13 @@ const AboutUs = () => {
               className="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl mb-6 tracking-tight"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              About Mahamaya Law Association
+              About Mahamaya Law 
             </h2>
             <p
               className="text-lg text-gray-700 sm:text-xl lg:text-lg leading-relaxed mb-4"
               style={{ fontFamily: 'Roboto, sans-serif' }}
             >
-              At Mahamaya Law Association, we are committed to delivering exceptional legal services across a wide range of practice areas. Our team of dedicated professionals strives to uphold the highest standards of integrity and client satisfaction.
+              At Mahamaya Law, we are committed to delivering exceptional legal services across a wide range of practice areas. Our team of dedicated professionals strives to uphold the highest standards of integrity and client satisfaction.
             </p>
             <p
               className="text-lg text-gray-700 sm:text-xl lg:text-lg leading-relaxed mb-6"

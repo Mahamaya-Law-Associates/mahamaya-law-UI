@@ -1,12 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 
 const HeroSection = () => {
   return (
     <div className="relative bg-gray-900">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Image
+        <img
           className="w-full h-full object-cover opacity-50"
           src="images/Lawfirm_bg.jpg"
           alt="Legal Advisory Background"
@@ -21,7 +20,7 @@ const HeroSection = () => {
           <span className="block text-indigo-300">Your Rights, Our Focus:</span>
         </h1>
         <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-gray-300 text-center lg:text-left max-w-lg lg:max-w-none">
-          Mahamaya law association is here to guide you through every legal hurdle. With a client-first approach, we ensure your case receives the attention it deserves to secure the best possible outcome.
+          Mahamaya law is here to guide you through every legal hurdle. With a client-first approach, we ensure your case receives the attention it deserves to secure the best possible outcome.
         </p>
         <a
           href="#"

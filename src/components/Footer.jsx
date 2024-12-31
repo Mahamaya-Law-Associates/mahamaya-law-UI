@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-black py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm sm:text-base lg:text-lg text-white">
-          &copy; 2024 Copyright by <span className="font-semibold">MAHAMAYA LAW ASSOCIATES</span> All Rights Reserved
+          &copy; 2024 Copyright by <span className="font-semibold">MAHAMAYA LAW</span> All Rights Reserved
         </p>
       </div>
     </footer>

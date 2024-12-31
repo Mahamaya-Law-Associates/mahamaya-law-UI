@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useFormik } from 'formik'; 
@@ -195,7 +194,7 @@ const BlogCreation = () => {
 
                             {previewImage && previewImage != null ? (
                                 <div className="mt-4">
-                                    <Image
+                                    <img
                                         src={previewImage}
                                         alt="Preview"
                                         className="w-full h-48 object-cover rounded-md border"
@@ -231,7 +230,7 @@ const BlogCreation = () => {
                                 className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
                             >
                                 <div className="relative">
-                                    <Image
+                                    <img
                                         src={blog.image}
                                         alt={blog.title}
                                         className="w-full h-64 object-cover"

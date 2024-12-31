@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 const CardSection = () => {
   const cards = [
@@ -57,7 +56,7 @@ const CardSection = () => {
               key={index}
               className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out hover:shadow-2xl"
             >
-              <Image
+              <img
                 src={card.image}
                 alt={card.title}
                 className="h-56 w-full object-cover transition duration-300 ease-in-out"

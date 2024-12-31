@@ -1,6 +1,5 @@
 'use client';
 import axios from 'axios';
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 const Blog = () => {
@@ -57,7 +56,7 @@ const Blog = () => {
                                 >
                                     {/* Blog Image */}
                                     <div className="relative">
-                                        <Image
+                                        <img
                                             src={blog.image}
                                             alt={blog.title}
                                             className="w-full h-auto object-contain"
