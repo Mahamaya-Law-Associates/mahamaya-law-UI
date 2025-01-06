@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-100 via-yellow-100 to-blue-100 py-12 lg:py-24">
+    <div className="py-12 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center lg:space-x-12">
           

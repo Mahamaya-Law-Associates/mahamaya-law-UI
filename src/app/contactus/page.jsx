@@ -1,5 +1,6 @@
 // src/components/ContactUs.js
-import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faMap } from "@fortawesome/free-regular-svg-icons";
 
 const ContactUs = () => {
   return (
@@ -18,29 +19,24 @@ const ContactUs = () => {
       <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {/* By Phone Section */}
         <div className="bg-white p-8 shadow-xl rounded-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Phone Icon"
-            className="mb-4 w-20 h-20"
-          />
-          <h3 className="text-2xl font-bold text-indigo-700 mb-3">By Phone</h3>
-          <p className="text-gray-500 text-center">
+          {/* <FontAwesomeIcon icon={faPhone} width={100} className="p-5"/> */}
+          <img src="https://img.icons8.com/?size=100&id=Jq5NvNoYeVmi&format=png&color=000000" alt="" />
+          <h3 className="text-2xl font-bold text-indigo-700 mb-3">Phone</h3>
+          <p className="text-gray-500">
             (Monday to Friday, 9am to 6pm PST)
           </p>
           <p className="mt-4 text-gray-800 font-semibold">
-            Call Us: +91 8869990580
+            Call Us: 
+            <a href="tel:+918869990580">+91 8869990580</a>
           </p>
         </div>
 
-        {/* By Email Section */}
+        {/* Email Section */}
         <div className="bg-white p-8 shadow-xl rounded-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Email Icon"
-            className="mb-4 w-20 h-20"
-          />
-          <h3 className="text-2xl font-bold text-indigo-700 mb-3">By Email</h3>
-          <p className="text-gray-500 text-center">
+          {/* <FontAwesomeIcon icon={faEnvelope} width={100} className="p-5"/> */}
+          <img src="https://img.icons8.com/?size=100&id=124218&format=png&color=000000" alt="" />
+          <h3 className="text-2xl font-bold text-indigo-700 mb-3">Email</h3>
+          <p className="text-gray-500">
             Just send us your questions or concerns, and we will get back to you promptly.
           </p>
           <a
@@ -51,24 +47,19 @@ const ContactUs = () => {
           </a>
         </div>
 
-        {/* By Address Section */}
+        {/* Address Section */}
         <div className="bg-white p-8 shadow-xl rounded-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Address Icon"
-            className="mb-4 w-20 h-20"
-          />
-          <h3 className="text-2xl font-bold text-indigo-700 mb-3">By Address</h3>
-          <p className="text-gray-500 text-center mb-4">
+          {/* <FontAwesomeIcon icon={faMap} width={100} className="p-5"/> */}
+          <img src="https://img.icons8.com/?size=100&id=z5fB0FkTx33n&format=png&color=000000" alt="" />
+          <h3 className="text-2xl font-bold text-indigo-700 mb-3">Address</h3>
+          <p className="text-gray-500 mb-4">
             Visit our office at the addresses below:
           </p>
-          <p className="text-gray-800 font-semibold text-center">
-            Jai Prakash Nagar, <br />
-            Alambagh, Lucknow
+          <p className="text-gray-800 font-semibold">
+            Jai Prakash Nagar, Alambagh, Lucknow
           </p>
-          <p className="mt-6 text-gray-800 font-semibold text-center">
-            304, Block B, Sector-62, <br />
-            Noida, Delhi NCR
+          <p className="mt-6 text-gray-800 font-semibold">
+            304, Block B, Sector-62, Noida, Delhi NCR
           </p>
         </div>
       </div>

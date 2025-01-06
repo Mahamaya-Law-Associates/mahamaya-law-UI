@@ -10,12 +10,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full">
-      <header className="sticky top-0 z-50 bg-gradient-to-r from-indigo-600 to-purple-700 ">
-        <nav className="flex justify-between w-full p-4 items-center">
+    <div className="w-full flex justify-center">
+      <header className="sticky top-0 z-50 bg-white w-5/6 flex justify-center">
+        <nav className="flex w-full justify-between p-4 items-center">
           {/* Logo/Brand */}
-          <a href="#">
-            <span className="font-semibold text-2xl tracking-tight text-white">Mahamaya Law Associates</span>
+          <a href="/">
+            <span className="font-semibold mx-5 text-2xl tracking-tight">Mahamaya Law</span>
           </a>
 
           {/* Mobile Menu Button */}
@@ -34,22 +34,22 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex md:items-center">
-            <Link className="block text-white mr-4 hover:text-indigo-300 transition duration-300" href="/">Home</Link>
-            <Link className="block text-white mr-4 hover:text-indigo-300 transition duration-300" href="/aboutus">About Us</Link>
-            <Link className="block text-white mr-4 hover:text-indigo-300 transition duration-300" href="/blogs">Blogs</Link>
-            <Link className="block text-white mr-4 hover:text-indigo-300 transition duration-300" href="/contactus">Contact Us</Link>
-            <Link className="block text-white mr-4 hover:text-indigo-300 transition duration-300" href="/adminlogin">Admin</Link>
+            <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/">Home</Link>
+            <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/aboutus">About Us</Link>
+            <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/blogs">Blogs</Link>
+            <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/contactus">Contact Us</Link>
+            {/* <Link className="block mr-4 hover:text-indigo-300 transition duration-300" href="/adminlogin">Admin</Link> */}
           </div>
         </nav>
 
         {/* Mobile Menu */}
         {isOpen && (
           <div className="bg-indigo-600 md:hidden transition duration-300">
-            <Link className="block text-white p-4 hover:bg-indigo-700" href="/" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link className="block text-white p-4 hover:bg-indigo-700" href="/aboutus" onClick={() => setIsOpen(false)}>About Us</Link>
-            <Link className="block text-white p-4 hover:bg-indigo-700" href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
-            <Link className="block text-white p-4 hover:bg-indigo-700" href="/contactus" onClick={() => setIsOpen(false)}>Contact Us</Link>
-            <Link className="block text-white p-4 hover:bg-indigo-700" href="/adminlogin" onClick={() => setIsOpen(false)}>Admin</Link>
+            <Link className="block p-4 hover:bg-indigo-700" href="/" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link className="block p-4 hover:bg-indigo-700" href="/aboutus" onClick={() => setIsOpen(false)}>About Us</Link>
+            <Link className="block p-4 hover:bg-indigo-700" href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
+            <Link className="block p-4 hover:bg-indigo-700" href="/contactus" onClick={() => setIsOpen(false)}>Contact Us</Link>
+            {/* <Link className="block p-4 hover:bg-indigo-700" href="/adminlogin" onClick={() => setIsOpen(false)}>Admin</Link> */}
           </div>
         )}
       </header>
