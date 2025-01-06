@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State for mobile menu
@@ -44,7 +45,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="bg-indigo-600 md:hidden transition duration-300">
+          <div className="bg-white md:hidden transition duration-300">
             <Link className="block p-4 hover:bg-indigo-700" href="/" onClick={() => setIsOpen(false)}>Home</Link>
             <Link className="block p-4 hover:bg-indigo-700" href="/aboutus" onClick={() => setIsOpen(false)}>About Us</Link>
             <Link className="block p-4 hover:bg-indigo-700" href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
