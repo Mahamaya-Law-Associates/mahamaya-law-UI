@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+  .header-items {
+    /* display: none; */
+    visibility: hidden;
+    display: none;
+  }
+}
