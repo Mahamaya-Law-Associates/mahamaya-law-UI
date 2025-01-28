@@ -20,7 +20,7 @@ const Navbar = () => {
           </a>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden" >
             <button
               onClick={toggleMenu}
               className="text-white focus:outline-none"
@@ -34,7 +34,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="header-items md:flex md:items-center">
+          <div className="hidden md:flex md:items-center">
             <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/">Home</Link>
             <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/aboutus">About Us</Link>
             <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/blogs">Blogs</Link>
