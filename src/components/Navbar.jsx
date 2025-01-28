@@ -11,13 +11,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full">
-      <header className="sticky top-0 z-50 bg-white">
+    <div className="sticky top-0 z-50 w-full">
+      <header className="bg-white">
         <nav className="flex justify-between w-full p-4 items-center">
           {/* Logo/Brand */}
+          <div className="name">
           <a href="/">
             <span className="font-semibold mx-5 text-2xl tracking-tight">Mahamaya Law</span>
           </a>
+          </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden" >
@@ -59,3 +61,42 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+// 'use client';
+// import React from 'react';
+// import Link from 'next/link';
+// import '../styles/navbar.css'; // Ensure this file contains any additional custom styles
+
+// const Navbar = () => {
+//   return (
+//     <header className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+//       <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
+//         {/* Organization Name */}
+//         <div className="text-2xl font-semibold tracking-tight">
+//           <Link href="/">
+//             <a className="hover:text-indigo-500 transition duration-300">Mahamaya Law</a>
+//           </Link>
+//         </div>
+
+//         {/* Navigation Links */}
+//         <div className="flex space-x-6 text-lg">
+//           <Link href="/">
+//             <a className="hover:text-indigo-500 transition duration-300">Home</a>
+//           </Link>
+//           <Link href="/aboutus">
+//             <a className="hover:text-indigo-500 transition duration-300">About Us</a>
+//           </Link>
+//           <Link href="/blogs">
+//             <a className="hover:text-indigo-500 transition duration-300">Blogs</a>
+//           </Link>
+//           <Link href="/contactus">
+//             <a className="hover:text-indigo-500 transition duration-300">Contact Us</a>
+//           </Link>
+//         </div>
+//       </nav>
+//     </header>
+//   );
+// };
+
+// export default Navbar;

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/whychooseus.css'; // Import the CSS file
 
 const WhyChooseUs = () => {
   return (
@@ -10,7 +11,7 @@ const WhyChooseUs = () => {
         <div className="grid gap-8 lg:gap-10 sm:grid-cols-1 lg:grid-cols-1">
 
           {/* First item */}
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-4 animated-item">
             <div className="flex-shrink-0">
               <svg className="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5 10l6 6 6-6H5z" clipRule="evenodd" />
@@ -19,13 +20,13 @@ const WhyChooseUs = () => {
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Expertise</h3>
               <p className="text-sm sm:text-base text-gray-600 mt-2">
-              Extensive experience and deep knowledge in various legal practice areas.
+                Extensive experience and deep knowledge in various legal practice areas.
               </p>
             </div>
           </div>
 
           {/* Second item */}
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-4 animated-item">
             <div className="flex-shrink-0">
               <svg className="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5 10l6 6 6-6H5z" clipRule="evenodd" />
@@ -34,13 +35,13 @@ const WhyChooseUs = () => {
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Client-Centric Approach</h3>
               <p className="text-sm sm:text-base text-gray-600 mt-2">
-              Tailored legal solutions to meet specific client needs.
+                Tailored legal solutions to meet specific client needs.
               </p>
             </div>
           </div>
 
           {/* Third item */}
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-4 animated-item">
             <div className="flex-shrink-0">
               <svg className="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5 10l6 6 6-6H5z" clipRule="evenodd" />
@@ -49,27 +50,27 @@ const WhyChooseUs = () => {
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Ethical Standards</h3>
               <p className="text-sm sm:text-base text-gray-600 mt-2">
-              Commitment to high ethical and professional standards.
+                Commitment to high ethical and professional standards.
               </p>
             </div>
           </div>
 
-          {/*fourth item*/}
-          <div className="flex items-start space-x-4">
+          {/* Fourth item */}
+          <div className="flex items-start space-x-4 animated-item">
             <div className="flex-shrink-0">
               <svg className="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5 10l6 6 6-6H5z" clipRule="evenodd" />
               </svg>
             </div>
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Effective representation</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Effective Representation</h3>
               <p className="text-sm sm:text-base text-gray-600 mt-2">
-              Proven ability to deliver successful outcomes.  </p>
+                Proven ability to deliver successful outcomes.
+              </p>
             </div>
           </div>
-          {/*fifth item*/}
-          {/*sixth item*/}
 
+          {/* Additional items can be added here */}
 
         </div>
       </div>
