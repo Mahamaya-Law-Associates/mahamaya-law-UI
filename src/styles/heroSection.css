@@ -62,7 +62,7 @@
   }
   
   /* Paragraph Animation */
-  p {
+  .description p {
     line-height: 1.6;
     animation: fadeInUp 2s ease-out;
   }
@@ -79,13 +79,13 @@
   }
   
   /* Button Hover Effect and Animation */
-  a {
+  .description a {
     text-decoration: none;
     transition: all 0.3s ease;
     animation: bounceIn 2.5s ease-out;
   }
   
-  a:hover {
+  .description a:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   }
@@ -110,11 +110,11 @@
       font-size: 2.5rem;
     }
   
-    p {
+    .description p {
       font-size: 1rem;
     }
   
-    a {
+    .description a {
       font-size: 0.9rem;
       padding: 0.8rem 1.5rem;
     }
@@ -125,11 +125,11 @@
       font-size: 2rem;
     }
   
-    p {
+    .description p {
       font-size: 0.9rem;
     }
   
-    a {
+    .description a {
       font-size: 0.8rem;
       padding: 0.6rem 1.2rem;
     }

@@ -1,17 +1,21 @@
 'use client';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Footer from '@/components/Footer';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const fetchBlogs = () => {
         axios.get('https://mahamaya-law.vercel.app/blog/getall')
             .then((res) => {
                 setBlogs(res.data);
+                setLoading(false);
             })
             .catch((err) => {
                 console.log(err);
+                setLoading(false);
             });
     };
 
@@ -22,16 +26,24 @@ const Blog = () => {
     const displayBlog = () => {
         if (blogs.length === 0) {
             return (
+                
                 <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-blue-100 to-purple-100">
-                    <div className="p-6 bg-white border border-blue-300 text-blue-800 rounded-md shadow-lg animate-pulse">
-                        <h2 className="text-2xl font-semibold mb-2">No Blogs Available</h2>
-                        <p className="text-lg">Check back later for insights and updates from our team!</p>
-                    </div>
+                    { !loading ? ( 
+                        <div className="p-6 bg-white border border-blue-300 text-blue-800 rounded-md shadow-lg animate-pulse">
+                            <h2 className="text-2xl font-semibold mb-2">No Blogs Available</h2>
+                            <p className="text-lg">Check back later for insights and updates from our team!</p>
+                        </div>
+                    ) : (
+                        <div className="p-6 bg-white border border-blue-300 text-blue-800 rounded-md shadow-lg animate-pulse">
+                            <h2 className="text-2xl font-semibold mb-2">Loading</h2>
+                            <p className="text-lg">Getting all the latest blogs just for you ...</p>
+                        </div>
+                    )}
                 </div>
             );
         } else {
             return (
-                <section className="relative w-full bg-gray-100 py-12">
+                <section className="relative w-full bg-gray-100 pt-12 pb-40">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex flex-col justify-center items-center text-center mb-8">
                             <div className="text-sm font-medium text-gray-500 mb-4">
@@ -81,7 +93,12 @@ const Blog = () => {
         }
     };
 
-    return <div>{displayBlog()}</div>;
+    return (
+        <div>
+            {displayBlog()} 
+            <Footer />
+        </div>
+    );
 };
 
 export default Blog;

@@ -15,7 +15,7 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-48 flex flex-col items-center ">
+      <div className="description relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-48 flex flex-col items-center ">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white text-center lg:text-left shadow-lg">
           Tailored Legal Advice
           <br />

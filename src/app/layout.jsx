@@ -9,7 +9,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Mahamaya Law",
   description: "Mahamaya Law is a law firm that provides legal services to clients in India.",
-  image: "public/images/Mahamaya_Logo.png"
+  icons: {
+    icon: '../../public/images/MahamayaLawLogo.png',
+    apple: '../../public/images/MahamayaLawLogo.png',
+    shortcut: '../../public/images/MahamayaLawLogo.png', 
+  },
 };
 
 export default function RootLayout({ children }) {

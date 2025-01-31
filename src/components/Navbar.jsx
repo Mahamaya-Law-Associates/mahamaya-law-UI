@@ -16,9 +16,12 @@ const Navbar = () => {
         <nav className="flex justify-between w-full p-4 items-center">
           {/* Logo/Brand */}
           <div className="name">
-          <a href="/">
+          <Link href="/" className=''>
+            <div className='flex flex-row ml-5 items-center'>
+            <img src="/images/MahamayaLawLogo.png" alt="Mahamaya Law" className="w-10 h-10" />
             <span className="font-semibold mx-5 text-2xl tracking-tight">Mahamaya Law</span>
-          </a>
+            </div>
+          </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -65,7 +68,7 @@ export default Navbar;
 
 // 'use client';
 // import React from 'react';
-// import Link from 'next/link';
+// import a from 'next/a';
 // import '../styles/navbar.css'; // Ensure this file contains any additional custom styles
 
 // const Navbar = () => {
@@ -74,25 +77,25 @@ export default Navbar;
 //       <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
 //         {/* Organization Name */}
 //         <div className="text-2xl font-semibold tracking-tight">
-//           <Link href="/">
+//           <a href="/">
 //             <a className="hover:text-indigo-500 transition duration-300">Mahamaya Law</a>
-//           </Link>
+//           </a>
 //         </div>
 
-//         {/* Navigation Links */}
+//         {/* Navigation as */}
 //         <div className="flex space-x-6 text-lg">
-//           <Link href="/">
+//           <a href="/">
 //             <a className="hover:text-indigo-500 transition duration-300">Home</a>
-//           </Link>
-//           <Link href="/aboutus">
+//           </a>
+//           <a href="/aboutus">
 //             <a className="hover:text-indigo-500 transition duration-300">About Us</a>
-//           </Link>
-//           <Link href="/blogs">
+//           </a>
+//           <a href="/blogs">
 //             <a className="hover:text-indigo-500 transition duration-300">Blogs</a>
-//           </Link>
-//           <Link href="/contactus">
+//           </a>
+//           <a href="/contactus">
 //             <a className="hover:text-indigo-500 transition duration-300">Contact Us</a>
-//           </Link>
+//           </a>
 //         </div>
 //       </nav>
 //     </header>
