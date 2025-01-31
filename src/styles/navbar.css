@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.name{
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.nav-item {
+  position: relative;
+  display: block; /* Ensures the element is treated as inline */
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Adjust thickness of the underline */
+  background-color: #6a6a6a;
+  transition: width 500ms ease;
+}
+
+.nav-item:hover::after {
+  width: 100%; /* Full width of the element */
+}
+
+.nav-item:hover {
+  color: #6a6a6a;
+  text-decoration: none;
+
+}

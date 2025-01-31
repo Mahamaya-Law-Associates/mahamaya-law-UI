@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation'; // Import useRouter for navigation
 import AboutUs from '@/components/AboutUs';
 import CardSection from '@/components/CardSection';
@@ -13,7 +13,15 @@ const Home = () => {
   const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
   const router = useRouter(); // Initialize useRouter
 
+  useEffect(() => {
+    const acceptedTerms = sessionStorage.getItem('acceptedTerms');
+    if (acceptedTerms === 'true') {
+      setHasAcceptedTerms(true);
+    }
+  }, []);
+
   const handleAcceptTerms = () => {
+    sessionStorage.setItem('acceptedTerms', 'true'); // Store accepted terms in session storage
     setHasAcceptedTerms(true);
   };
 
@@ -25,7 +33,7 @@ const Home = () => {
   return (
     <>
       {!hasAcceptedTerms ? (
-        <UserAgreementModal onAccept={handleAcceptTerms} />
+        <UserAgreementModal onAccept={handleAcceptTerms} /> 
       ) : (
         <>
           <HeroSection />
