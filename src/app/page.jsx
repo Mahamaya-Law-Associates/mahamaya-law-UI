@@ -35,14 +35,12 @@ const Home = () => {
       {!hasAcceptedTerms ? (
         <UserAgreementModal onAccept={handleAcceptTerms} /> 
       ) : (
-        <>
-          <HeroSection />
-          <CardSection />
-          <WhyChooseUs />
-          <AboutUs />
-          <Footer />
-        </>
-      )}
+        <></> )}
+      <HeroSection />
+      <CardSection />
+      <WhyChooseUs />
+      <AboutUs />
+      <Footer />
     </>
   );
 };
