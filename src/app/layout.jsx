@@ -18,13 +18,6 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
-  // const termsAccepted = false;
-  
-  // const acceptedTerms = sessionStorage.getItem('acceptedTerms');
-  // if (acceptedTerms === 'true') {
-  //   termsAccepted = true;
-  // }
-
   return (
     <html lang="en">
       <body className={inter.className}>
