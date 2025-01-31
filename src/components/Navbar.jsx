@@ -40,22 +40,22 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex md:items-center">
-            <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/">Home</Link>
-            <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/aboutus">About Us</Link>
-            <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/blogs">Blogs</Link>
-            <Link className="block mx-5 hover:text-indigo-300 transition duration-300" href="/contactus">Contact Us</Link>
-            {/* <Link className="block mr-4 hover:text-indigo-300 transition duration-300" href="/adminlogin">Admin</Link> */}
+            <Link className="nav-item mx-5" href="/">Home</Link>
+            <Link className="nav-item mx-5" href="/aboutus">About Us</Link>
+            <Link className="nav-item mx-5" href="/blogs">Blogs</Link>
+            <Link className="nav-item mx-5" href="/contactus">Contact Us</Link>
+            {/* <Link className="nav-item mr-4" href="/adminlogin">Admin</Link> */}
           </div>
         </nav>
 
         {/* Mobile Menu */}
         {isOpen && (
           <div className="bg-white md:hidden transition duration-300">
-            <Link className="block p-4 hover:bg-indigo-700" href="/" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link className="block p-4 hover:bg-indigo-700" href="/aboutus" onClick={() => setIsOpen(false)}>About Us</Link>
-            <Link className="block p-4 hover:bg-indigo-700" href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
-            <Link className="block p-4 hover:bg-indigo-700" href="/contactus" onClick={() => setIsOpen(false)}>Contact Us</Link>
-            {/* <Link className="block p-4 hover:bg-indigo-700" href="/adminlogin" onClick={() => setIsOpen(false)}>Admin</Link> */}
+            <Link className="nav-item p-4" href="/" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link className="nav-item p-4" href="/aboutus" onClick={() => setIsOpen(false)}>About Us</Link>
+            <Link className="nav-item p-4" href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
+            <Link className="nav-item p-4" href="/contactus" onClick={() => setIsOpen(false)}>Contact Us</Link>
+            {/* <Link className="nav-item p-4" href="/adminlogin" onClick={() => setIsOpen(false)}>Admin</Link> */}
           </div>
         )}
       </header>

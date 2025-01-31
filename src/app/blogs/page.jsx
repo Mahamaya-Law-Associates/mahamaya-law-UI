@@ -27,7 +27,7 @@ const Blog = () => {
         if (blogs.length === 0) {
             return (
                 
-                <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-blue-100 to-purple-100">
+                <div className="flex justify-center items-center min-h-screen bg-gray-100">
                     { !loading ? ( 
                         <div className="p-6 bg-white border border-blue-300 text-blue-800 rounded-md shadow-lg animate-pulse">
                             <h2 className="text-2xl font-semibold mb-2">No Blogs Available</h2>
