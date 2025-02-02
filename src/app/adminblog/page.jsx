@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import { useFormik } from 'formik'; 
 import * as Yup from 'yup';
 import { useRouter } from 'next/navigation'; // Use next/navigation in app directory
+import '../../styles/adminblogpost.css';
 
 // Validation schema using Yup
 const BlogSchema = Yup.object().shape({
@@ -18,6 +19,98 @@ const BlogSchema = Yup.object().shape({
 });
 
 const BlogCreation = () => {
+
+
+    const [description, setDescription] = useState("");
+        const [font, setFont] = useState("Arial");
+    
+        // Update the description content and preview
+        const updatePreview = () => {
+            return description
+                .replace(/\n/g, "<br>") // Handle line breaks
+                .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // Bold formatting (using **)
+                .replace(/\<i\>(.*?)\<\/i\>/g, "<em>$1</em>") // Italic formatting (using <em>)
+                .replace(/^\• (.*)$/gm, (match) => {
+                    // Convert list items (lines starting with '&bull; ')
+                    return `<ul><li>${match.slice(2)}</li></ul>`;
+                });
+        };
+    
+        // Handle changes in the textarea
+        const handleEditorChange = (e) => {
+            formik.handleChange(e);
+            setDescription(e.target.value);
+        };
+    
+        // Handle the bold button
+        const handleBold = () => {
+            const selectionStart = document.getElementById("description").selectionStart;
+            const selectionEnd = document.getElementById("description").selectionEnd;
+            const selection = description.substring(selectionStart, selectionEnd);
+    
+            const newText = selection ? `**${selection}**` : "**bold text** ";
+            const updatedText = description.slice(0, selectionStart) + newText + description.slice(selectionEnd);
+            setDescription(updatedText);
+    
+            setTimeout(() => {
+                const newCaretPosition = selectionStart + newText.length;
+                document.getElementById("description").setSelectionRange(newCaretPosition, newCaretPosition);
+            }, 0);
+        };
+
+        const handleCapitalize = () => {
+            const selectionStart = document.getElementById("description").selectionStart;
+            const selectionEnd = document.getElementById("description").selectionEnd;
+            const selection = description.substring(selectionStart, selectionEnd);
+
+            const newText = selection ? selection.toUpperCase() : "CAPITALIZED TEXT ";
+            const updatedText = description.slice(0, selectionStart) + newText + description.slice(selectionEnd);
+            setDescription(updatedText);
+
+            setTimeout(() => {
+                const newCaretPosition = selectionStart + newText.length;
+                document.getElementById("description").setSelectionRange(newCaretPosition, newCaretPosition);
+            }, 0);
+        };
+    
+        const handleItalic = () => {
+            const selectionStart = document.getElementById("description").selectionStart;
+            const selectionEnd = document.getElementById("description").selectionEnd;
+            const selection = description.substring(selectionStart, selectionEnd);
+
+            const newText = selection ? `<em>${selection}</em>` : "<em>italic text</em> ";
+            const updatedText = description.slice(0, selectionStart) + newText + description.slice(selectionEnd);
+            setDescription(updatedText);
+
+            setTimeout(() => {
+                const newCaretPosition = selectionStart + newText.length;
+                document.getElementById("description").setSelectionRange(newCaretPosition, newCaretPosition);
+            }, 0);
+        };
+    
+        // Handle the list button
+        const handleList = () => {
+            const selectionStart = document.getElementById("description").selectionStart;
+            const selectionEnd = document.getElementById("description").selectionEnd;
+            const selection = description.substring(selectionStart, selectionEnd);
+
+            const newText = selection ? `&bull; ${selection}` : "&bull; New list item \n";
+            const updatedText = description.slice(0, selectionStart) + newText + description.slice(selectionEnd);
+            setDescription(updatedText);
+
+            setTimeout(() => {
+                const newCaretPosition = selectionStart + newText.length;
+                document.getElementById("description").setSelectionRange(newCaretPosition, newCaretPosition);
+            }, 0);
+        };
+    
+        // Handle font change
+        const handleFontChange = (e) => {
+            setFont(e.target.value);
+        };
+
+
+
     const router = useRouter();
     const [previewImage, setPreviewImage] = useState(null);
     const [blogs, setBlogs] = useState([]);
@@ -138,7 +231,7 @@ const BlogCreation = () => {
             </div>
 
             {/* Blog Creation Form */}
-            <div className="max-w-md w-full space-y-8 p-10 bg-white rounded-xl shadow-md mb-8">
+            <div className="w-full space-y-8 p-10 bg-white rounded-xl shadow-md mb-8">
                 <h2 className="text-center text-3xl font-extrabold text-gray-900">Create a Blog</h2>
                 <form onSubmit={formik.handleSubmit} className="mt-8 space-y-6">
                     <div className="rounded-md shadow-sm -space-y-px">
@@ -159,8 +252,69 @@ const BlogCreation = () => {
                             ) : null}
                         </div>
 
+                        <div>
+                    <div className="card border rounded-xl border-slate-300 w-1/2 my-8">
+                        <h1 className='text-xl p-2'>Create a new Blog Post</h1>
+                        <hr />
+                        <div className="toolbar pt-3 px-5">
+                            <button className='px-2 border rounded-lg bg-gray-100 hover:bg-gray-200 focus:bg-gray-300' onClick={handleCapitalize}>
+                                <span>CAPS</span>
+                            </button>
+                            <span className="mx-2 text-gray-300">|</span>
+                            <button className='px-2 border rounded-lg bg-gray-100 hover:bg-gray-200 focus:bg-gray-300' onClick={handleBold}>
+                                <strong>B</strong>
+                            </button>
+                            <span className="mx-2 text-gray-300">|</span>
+                            <button className='px-2 border rounded-lg bg-gray-100 hover:bg-gray-200 focus:bg-gray-300' onClick={handleItalic}>
+                                <i>I</i>
+                            </button>
+                            <span className="mx-2 text-gray-300">|</span>
+                            <button className='px-2 border rounded-lg bg-gray-100 hover:bg-gray-200 focus:bg-gray-300' onClick={handleList}>
+                                <img style={{display: 'inline'}} width="20" height="20" src="https://img.icons8.com/ios-glyphs/20/bulleted-list.png" alt="bulleted-list"/>
+                                
+                            </button>
+                            <span className="mx-2 text-gray-300">|</span>
+                            <select className='px-2 border rounded-lg bg-gray-100 hover:bg-gray-200 focus:bg-gray-300' onChange={handleFontChange} value={font}>
+                                <option value="Arial">Arial</option>
+                                <option value="Courier New">Courier New</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                                <option value="Verdana">Verdana</option>
+                                <option value="Cormorant Garamond">Cormorant Garamond</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div className="textarea flex m-auto">
+                        <div className="desc w-1/2 mx-2 mb-5">
+                            <textarea 
+                                id="description"
+                                name='description'
+                                placeholder="Start typing here..."
+                                value={description}
+                                onChange={handleEditorChange}
+                                onBlur={formik.handleBlur}
+                                style={{ fontFamily: font, border: "1px solid #2f2f2f" }}
+                            />
+                            {formik.touched.description && formik.errors.description ? (
+                                <div className="text-red-500 text-sm">{formik.errors.description}</div>
+                            ) : null}
+                        </div>
+                        <div className="preview-text w-1/2 mx-2">
+                            <h2 className='text-lg'>Preview:</h2>
+                            <div
+                                id="preview"
+                                dangerouslySetInnerHTML={{ __html: updatePreview() }}
+                                style={{ border: "1px solid #ddd", padding: "10px", backgroundColor: "#f9f9f9", minHeight: "472px", width: "100%" }}
+                            />
+                        </div>
+                        
+                    </div>
+
+                </div>
+
                         {/* Description Input */}
-                        <div className="mt-4">
+                        {/* <div className="mt-4">
                             <textarea
                                 id="description"
                                 name="description"
@@ -173,10 +327,10 @@ const BlogCreation = () => {
                             {formik.touched.description && formik.errors.description ? (
                                 <div className="text-red-500 text-sm">{formik.errors.description}</div>
                             ) : null}
-                        </div>
+                        </div> */}
 
                         {/* Image Upload Input */}
-                        <div className="mt-6">
+                        <div className="mt-6 mx-2">
                             <label htmlFor="image-upload" className="block text-sm font-medium text-gray-700">
                                 Upload Image
                             </label>
