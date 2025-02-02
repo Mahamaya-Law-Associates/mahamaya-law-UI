@@ -5,12 +5,12 @@
   border: 1px solid #b6b6b6;
 }
 
-.card {
+.all-services-card {
   width: 300px;
   border: 1px solid #f1f1f1;
 }
 
-.description {
+.service-description {
   @media screen and (max-width: 768px) {
     width: 100%;
   }
