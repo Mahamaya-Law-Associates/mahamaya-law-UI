@@ -35,7 +35,7 @@ const AboutUs = () => {
 
       {/* Our Services Section */}
       <div className="our-services flex flex-col md:flex-row mt-20 max-w-7xl mx-6 md:mx-20">
-        <div className="card p-10 bg-white border-1.5 text-wrap">
+        <div className="all-services-card p-10 bg-white border-1.5 text-wrap">
           <p className="text-2xl font-bold text-gray-900 pb-3" style={{ fontFamily: "Cormorant Garamond, serif" }}>
             Our Services
           </p>
@@ -54,8 +54,8 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-        <div className="description py-12 md:py-6 ps-3 pe-3 md:ps-16 md:pe-6" id={selectedService?.id}>
-          <p className='heading pb-6 text-3xl font-extrabold' style={{ fontFamily: "Cormorant Garamond, serif" }}>{selectedService?.name}</p>
+        <div className="service-description py-12 md:py-6 ps-3 pe-3 md:ps-16 md:pe-6" id={selectedService?.id}>
+          <p className='service-title pb-6 text-3xl font-extrabold' style={{ fontFamily: "Cormorant Garamond, serif" }}>{selectedService?.name}</p>
           <hr className='pb-8' />
           <div className="desc">
             {selectedService?.value}
