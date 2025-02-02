@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 
 const ContactUs = () => {
   return (
-    <div>
       <div className="bg-gray-50 pt-16 pb-32 px-4 sm:px-6 lg:px-8">
         {/* Main Heading Section */}
         <div className="max-w-7xl mx-auto text-center">
@@ -66,8 +65,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
   );
 };
 

@@ -40,7 +40,6 @@ const Home = () => {
       <CardSection />
       <WhyChooseUs />
       <AboutUs />
-      <Footer />
     </>
   );
 };
