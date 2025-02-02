@@ -24,7 +24,7 @@ const ContactUs = () => {
             <img src="https://img.icons8.com/?size=100&id=Jq5NvNoYeVmi&format=png&color=000000" alt="" />
             <h3 className="text-2xl font-bold text-indigo-700 mb-3">Phone</h3>
             <p className="text-gray-500">
-              (Monday to Friday, 9am to 6pm PST)
+              (Monday to Friday)
             </p>
             <p className="mt-4 text-gray-800 font-semibold">
               Call Us:
@@ -57,11 +57,11 @@ const ContactUs = () => {
               Visit our office at the addresses below:
             </p>
             <p className="text-gray-800 font-semibold">
-              Jai Prakash Nagar, Alambagh, Lucknow
+              551/250 Jai Prakash Nagar, Alambagh, Lucknow, 226005
             </p>
-            <p className="mt-6 text-gray-800 font-semibold">
+            {/* <p className="mt-6 text-gray-800 font-semibold">
               304, Block B, Sector-62, Noida, Delhi NCR
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
