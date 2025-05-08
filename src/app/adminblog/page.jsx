@@ -7,7 +7,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useRouter } from 'next/navigation'; // Use next/navigation in app directory
 import '../../styles/adminblogpost.css';
-// import JoditEditor from 'jodit-react';
+import Link from 'next/link';
 
 const JoditEditor = dynamic(() => import('jodit-react'), { ssr: false });
 
@@ -140,16 +140,22 @@ const BlogCreation = ({ placeholder }) => {
             </div>
 
             <div className="my-8">
-              <JoditEditor className='my-8'
-                id='description'
-                name='description'
-                type='text'
+              <JoditEditor
+                className="my-8"
+                id="description"
+                name="description"
+                type="text"
                 ref={editor}
                 value={description}
                 config={config}
-                tabIndex={1} // tabIndex of textarea
-                onBlur={newContent => {setDescription(newContent); formik.values.description = newContent}} // preferred to use only this option to update the description for performance reasons
-                onChange={newContent => {formik.values.description = newContent}}
+                tabIndex={1} // TabIndex Of Textarea
+                onBlur={(newContent) => {
+                  setDescription(newContent);
+                  formik.setFieldValue('description', newContent);
+                }} // preferred to use only this option to update the description for performance reasons
+                onChange={(newContent) => {
+                  formik.setFieldValue('description', newContent);
+                }}
               />
               {description ? (
                 <div className="text-red-500 text-sm">{formik.errors.description}</div>
@@ -202,12 +208,13 @@ const BlogCreation = ({ placeholder }) => {
                       Delete
                     </button>
 
-                    <button
-                      onClick={() => viewBlog(blog._id)}
-                      className="border border-black text-black px-3 py-2 hover:bg-slate-600 hover:text-white"
-                    >
-                      View Blog ⟶
-                    </button>
+                    <Link href={`/blogs/${blog._id}`}>
+                      <button
+                        className="border border-black text-black px-3 py-2 hover:bg-slate-600 hover:text-white"
+                      >
+                        View Blog ⟶
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

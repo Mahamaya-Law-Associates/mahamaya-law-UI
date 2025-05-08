@@ -27,7 +27,7 @@ const cardsData = [
     title: "Insolvency and Bankruptcy",
     description:
       "Our insolvency and bankruptcy services provide expert legal support during restructuring, liquidation, and creditor claims. We assist businesses and individuals in navigating complex financial difficulties, ensuring compliance with regulations and protection of rights throughout the process.",
-    image: "images/insolvency.jpg",
+    image: "images/Insolvency.jpg",
   },
   {
     title: "Matrimonial Matters",
