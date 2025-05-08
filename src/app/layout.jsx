@@ -10,10 +10,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Mahamaya Law",
   description: "Mahamaya Law is a law firm that provides legal services to clients in India.",
+  // image: "images/MahamayaLawLogo.png",
+  // img: "images/MahamayaLawLogo.png",
+  // logo: "images/MahamayaLawLogo.png",
+  // icon: "images/MahamayaLawLogo.png",
   icons: {
-    icon: '../../public/images/MahamayaLawLogo.png',
-    apple: '../../public/images/MahamayaLawLogo.png',
-    shortcut: '../../public/images/MahamayaLawLogo.png', 
+    icon: '/images/MahamayaLawLogo.png',
+    apple: 'images/MahamayaLawLogo.png',
+    shortcut: 'images/MahamayaLawLogo.png', 
   },
 };
 
