@@ -1,12 +1,15 @@
 'use client';
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import dynamic from 'next/dynamic';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useRouter } from 'next/navigation'; // Use next/navigation in app directory
 import '../../styles/adminblogpost.css';
-import JoditEditor from 'jodit-react';
+// import JoditEditor from 'jodit-react';
+
+const JoditEditor = dynamic(() => import('jodit-react'), { ssr: false });
 
 // Validation schema using Yup
 const BlogSchema = Yup.object().shape({
