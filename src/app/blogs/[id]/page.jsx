@@ -103,8 +103,8 @@ const BlogDetails = () => {
             dangerouslySetInnerHTML={{ __html: processBlogContent(blog.description) }}
           ></div>
         </div>
-        <div className="bg-white card p-4 md:w-3/12 w-0 border hidden lg:block" >
-          <h1 className="text-xl font-bold" style={{ fontFamily: "Cormorant Garamond, serif" }}>Other blogs</h1>
+        <div className='bg-white p-4 md:w-3/12 w-0  hidden lg:block' style={{ backgroundColor: "white", border: "0.5px solid #aeaaaa" }}>
+          <h2 className="text-xl font-bold" style={{ fontFamily: "Cormorant Garamond, serif" }}>Other blogs</h2>
           <hr className="my-3" />
           <div className="flex flex-col gap-4">
             {randomBlogs.map((otherBlog, index) => (
