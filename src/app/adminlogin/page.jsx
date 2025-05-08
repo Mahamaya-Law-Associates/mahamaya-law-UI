@@ -3,12 +3,39 @@
 import axios from 'axios';
 import { useFormik } from 'formik';
 import { useRouter } from 'next/navigation';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 
 const Login = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false); // State for loading
+  const [loginLoading, setloginLoading] = useState(true); // State for loading
+
+
+  useEffect(() => {
+    async function fetchData() {
+      const storedToken = localStorage.getItem('token');
+      if (storedToken) {
+        try {
+          await axios.post('https://mahamaya-law.vercel.app/user/verifytoken', {}, {
+            headers: {
+              Authorization: `Bearer ${storedToken}`,
+            },
+          });
+          router.push('/adminblog');
+          setloginLoading(false); // Stop loading after verifying token
+        } catch (error) {
+          router.push('/adminlogin');
+          console.error('Token verification failed:', error);
+          setloginLoading(false); // Stop loading if token verification fails
+        }
+      } else {
+        router.push('/adminlogin');
+        setloginLoading(false); // Stop loading if no token is found
+      }
+    }
+    fetchData();
+  }, [router]);
 
   const loginForm = useFormik({
     initialValues: {
@@ -32,6 +59,16 @@ const Login = () => {
     }
   });
 
+  if (loginLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="p-6 bg-white border border-blue-300 text-blue-800 rounded-md shadow-lg animate-pulse">
+          <h2 className="text-2xl font-semibold mb-2">Loading...</h2>
+          {/* <p className="text-lg">Fetching blog details...</p> */}
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-lg w-full bg-white shadow-md rounded-lg p-8">

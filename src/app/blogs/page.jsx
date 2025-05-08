@@ -1,7 +1,7 @@
 'use client';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Footer from '@/components/Footer';
+import Link from 'next/link';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
@@ -64,34 +64,24 @@ const Blog = () => {
                             {blogs.map((blog) => (
                                 <div
                                     key={blog._id}
-                                    className="bg-white shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+                                    className="bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 min-h-40"
                                 >
-                                    {/* <div className="relative">
-                  <img
-                    src={blog.image}
-                    alt={blog.title}
-                    className="w-full h-64 object-cover"
-                  />
-                </div> */}
+
                                     <div className="p-4">
                                         <h2 className="text-lg text-gray-900 mb-2 line-clamp-3 min-h-24">{blog.title}</h2>
                                         <hr />
                                         {/* <p className="text-gray-700 text-sm mb-4 line-clamp-6 overflow-hidden" dangerouslySetInnerHTML={{ __html: blog.description }} ></p> */}
                                         <div className='flex justify-between items-center mt-4'>
 
-                                            <button
-                                                onClick={() => deleteBlog(blog._id)}
-                                                className="border border-black text-black px-3 py-2 hover:bg-slate-600 hover:text-white"
-                                            >
-                                                Delete
-                                            </button>
+                                            <div></div>
+                                            <Link href={`/blogs/${blog._id}`}>
+                                                <button
+                                                    className="border border-black text-black px-3 py-2 hover:bg-slate-600 hover:text-white"
+                                                >
+                                                    View Blog ⟶
+                                                </button>
+                                            </Link>
 
-                                            <button
-                                                onClick={() => viewBlog(blog._id)}
-                                                className="border border-black text-black px-3 py-2 hover:bg-slate-600 hover:text-white"
-                                            >
-                                                View Blog ⟶
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
