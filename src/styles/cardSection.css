@@ -11,8 +11,7 @@
   z-index: 10;
 }
 
-.slick-prev:before,
-.slick-next:before {
+.carousel-container .slick-slider .slick-arrow:before {
   color: #333;
   font-size: 24px;
 }
