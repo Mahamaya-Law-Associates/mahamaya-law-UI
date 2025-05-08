@@ -26,9 +26,9 @@ const Blog = () => {
     const displayBlog = () => {
         if (blogs.length === 0) {
             return (
-                
+
                 <div className="flex justify-center items-center min-h-screen bg-gray-100">
-                    { !loading ? ( 
+                    {!loading ? (
                         <div className="p-6 bg-white border border-blue-300 text-blue-800 rounded-md shadow-lg animate-pulse">
                             <h2 className="text-2xl font-semibold mb-2">No Blogs Available</h2>
                             <p className="text-lg">Check back later for insights and updates from our team!</p>
@@ -63,26 +63,36 @@ const Blog = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {blogs.map((blog) => (
                                 <div
-                                    key={blog.id}
-                                    className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                                    key={blog._id}
+                                    className="bg-white shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
                                 >
-                                    {/* Blog Image */}
-                                    <div className="relative">
-                                        <img
-                                            src={blog.image}
-                                            alt={blog.title}
-                                            className="w-full h-auto object-contain"
-                                        />
-                                    </div>
+                                    {/* <div className="relative">
+                  <img
+                    src={blog.image}
+                    alt={blog.title}
+                    className="w-full h-64 object-cover"
+                  />
+                </div> */}
+                                    <div className="p-4">
+                                        <h2 className="text-lg text-gray-900 mb-2 line-clamp-3 min-h-24">{blog.title}</h2>
+                                        <hr />
+                                        {/* <p className="text-gray-700 text-sm mb-4 line-clamp-6 overflow-hidden" dangerouslySetInnerHTML={{ __html: blog.description }} ></p> */}
+                                        <div className='flex justify-between items-center mt-4'>
 
-                                    {/* Blog Content */}
-                                    <div className="p-6">
-                                        <h2 className="font-bold text-lg text-gray-900 mb-2">
-                                            {blog.title}
-                                        </h2>
-                                        <p className="text-gray-600 mb-4 line-clamp-3">
-                                            {blog.description}
-                                        </p>
+                                            <button
+                                                onClick={() => deleteBlog(blog._id)}
+                                                className="border border-black text-black px-3 py-2 hover:bg-slate-600 hover:text-white"
+                                            >
+                                                Delete
+                                            </button>
+
+                                            <button
+                                                onClick={() => viewBlog(blog._id)}
+                                                className="border border-black text-black px-3 py-2 hover:bg-slate-600 hover:text-white"
+                                            >
+                                                View Blog ⟶
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -95,7 +105,7 @@ const Blog = () => {
 
     return (
         <div>
-            {displayBlog()} 
+            {displayBlog()}
         </div>
     );
 };
@@ -187,7 +197,7 @@ const Blog = () => {
 //     const displayBlog = () => {
 //         if (blogs.length === 0) {
 //             return (
-                
+
 //                 <div className="flex justify-center items-center min-h-screen bg-gray-100">
 //                     { !loading ? ( 
 //                         <div className="p-6 bg-white border border-blue-300 text-blue-800 rounded-md shadow-lg animate-pulse">
@@ -219,7 +229,7 @@ const Blog = () => {
 //                             <span className="mx-2 text-gray-300">|</span>
 //                             <button className='px-2 border rounded-lg bg-gray-100 hover:bg-gray-200 focus:bg-gray-300' onClick={handleList}>
 //                                 <img style={{display: 'inline'}} width="20" height="20" src="https://img.icons8.com/ios-glyphs/20/bulleted-list.png" alt="bulleted-list"/>
-                                
+
 //                             </button>
 //                             <span className="mx-2 text-gray-300">|</span>
 //                             <select className='px-2 border rounded-lg bg-gray-100 hover:bg-gray-200 focus:bg-gray-300' onChange={handleFontChange} value={font}>
@@ -232,7 +242,7 @@ const Blog = () => {
 //                             </select>
 //                         </div>
 //                     </div>
-                    
+
 //                     <div className="textarea flex m-auto">
 //                         <textarea
 //                             id="editor"
@@ -250,7 +260,7 @@ const Blog = () => {
 //                                 style={{ border: "1px solid #ddd", padding: "10px", backgroundColor: "#f9f9f9", minHeight: "150px", width: "100%" }}
 //                             />
 //                         </div>
-                        
+
 //                     </div>
 
 //                 </div>
