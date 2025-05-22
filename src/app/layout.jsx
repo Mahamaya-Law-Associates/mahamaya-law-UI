@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ["latin"] });
 
