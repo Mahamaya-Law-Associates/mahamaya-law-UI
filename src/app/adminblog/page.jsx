@@ -189,7 +189,7 @@ const BlogCreation = ({ placeholder }) => {
                 className="bg-white shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
               >
                 {/* <div className="relative">
-                  <img
+                  <Image
                     src={blog.image}
                     alt={blog.title}
                     className="w-full h-64 object-cover"

@@ -218,7 +218,7 @@ const Blog = () => {
 //                             </button>
 //                             <span className="mx-2 text-gray-300">|</span>
 //                             <button className='px-2 border rounded-lg bg-gray-100 hover:bg-gray-200 focus:bg-gray-300' onClick={handleList}>
-//                                 <img style={{display: 'inline'}} width="20" height="20" src="https://img.icons8.com/ios-glyphs/20/bulleted-list.png" alt="bulleted-list"/>
+//                                 <Image style={{display: 'inline'}} width="20" height="20" src="https://img.icons8.com/ios-glyphs/20/bulleted-list.png" alt="bulleted-list"/>
 
 //                             </button>
 //                             <span className="mx-2 text-gray-300">|</span>

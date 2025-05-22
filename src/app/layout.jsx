@@ -14,7 +14,7 @@ export const metadata = {
   // image: "images/MahamayaLawLogo.png",
   // img: "images/MahamayaLawLogo.png",
   // logo: "images/MahamayaLawLogo.png",
-  // icon: "images/MahamayaLawLogo.png",
+  // icon: "favicon.ico",
 };
 
 
@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <Link rel="icon" href="favicon.ico" />
+        <Link rel="apple-touch-icon" href="/images/MahamayaLawLogo.png" />
       </Head>
       <body className={inter.className}>
         <Navbar />

@@ -83,7 +83,7 @@ const AboutUs = () => {
 
       {/* Image Section */}
       {/* <div className="mt-12 flex items-center justify-center">
-        <img
+        <Image
           src="/images/MahamayaLawLogo.png"
           alt="Law Firm"
           className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
