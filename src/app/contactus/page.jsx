@@ -1,6 +1,5 @@
 // src/components/ContactUs.js
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faMap } from "@fortawesome/free-regular-svg-icons";
+import Image from "next/image";
 import Footer from "@/components/Footer";
 
 const ContactUs = () => {
@@ -21,7 +20,7 @@ const ContactUs = () => {
         {/* By Phone Section */}
         <div className="bg-white p-8 shadow-xl rounded-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
           {/* <FontAwesomeIcon icon={faPhone} width={100} className="p-5"/> */}
-          <img src="https://img.icons8.com/?size=100&id=Jq5NvNoYeVmi&format=png&color=000000" alt="" />
+          <Image src="https://img.icons8.com/?size=100&id=Jq5NvNoYeVmi&format=png&color=000000" alt="" />
           <h3 className="text-2xl font-bold text-indigo-700 mb-3">Phone</h3>
           <p className="text-gray-500 mb-4">
             Call Us:
@@ -34,7 +33,7 @@ const ContactUs = () => {
         {/* Email Section */}
         <div className="bg-white p-8 shadow-xl rounded-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
           {/* <FontAwesomeIcon icon={faEnvelope} width={100} className="p-5"/> */}
-          <img src="https://img.icons8.com/?size=100&id=124218&format=png&color=000000" alt="" />
+          <Image src="https://img.icons8.com/?size=100&id=124218&format=png&color=000000" alt="" />
           <h3 className="text-2xl font-bold text-indigo-700 mb-3">Email</h3>
           <p className="text-gray-500">
             Just send us your questions or concerns, and we will get back to you promptly.
@@ -50,7 +49,7 @@ const ContactUs = () => {
         {/* Address Section */}
         <div className="bg-white p-8 shadow-xl rounded-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
           {/* <FontAwesomeIcon icon={faMap} width={100} className="p-5"/> */}
-          <img src="https://img.icons8.com/?size=100&id=z5fB0FkTx33n&format=png&color=000000" alt="" />
+          <Image src="https://img.icons8.com/?size=100&id=z5fB0FkTx33n&format=png&color=000000" alt="" />
           <h3 className="text-2xl font-bold text-indigo-700 mb-3">Address</h3>
           <p className="text-gray-500 mb-4">
             Visit our office at the address below:

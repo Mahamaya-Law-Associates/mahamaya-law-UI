@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import '../styles/navbar.css';
 
 const Navbar = () => {
@@ -18,7 +19,7 @@ const Navbar = () => {
           <div className="name">
           <Link href="/" className=''>
             <div className='flex flex-row ml-5 items-center'>
-            <img src="/images/MahamayaLawLogo.png" alt="Mahamaya Law" className="w-10 h-10" />
+            <Image src="/images/MahamayaLawLogo.png" alt="Mahamaya Law" className="w-10 h-10" />
             <span className="font-semibold mx-5 text-2xl tracking-tight">Mahamaya Law</span>
             </div>
           </Link>
