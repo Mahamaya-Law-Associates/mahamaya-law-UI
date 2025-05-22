@@ -9,7 +9,7 @@ const AboutUs = () => {
         <div className="flex flex-col lg:flex-row items-center lg:space-x-12">
           {/* Image Section */}
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-            <Image
+            <img
               className="w-3/4 h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
               src="images/MahamayaLawLogo.png"
               alt="About Us"

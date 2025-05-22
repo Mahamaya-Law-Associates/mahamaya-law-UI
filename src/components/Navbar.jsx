@@ -19,7 +19,7 @@ const Navbar = () => {
           <div className="name">
           <Link href="/" className=''>
             <div className='flex flex-row ml-5 items-center'>
-            <Image src="/images/MahamayaLawLogo.png" alt="Mahamaya Law" className="w-10 h-10" />
+            <img src="/images/MahamayaLawLogo.png" alt="Mahamaya Law" className="w-10 h-10" />
             <span className="font-semibold mx-5 text-2xl tracking-tight">Mahamaya Law</span>
             </div>
           </Link>
