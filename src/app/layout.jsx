@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,17 +15,15 @@ export const metadata = {
   // img: "images/MahamayaLawLogo.png",
   // logo: "images/MahamayaLawLogo.png",
   // icon: "images/MahamayaLawLogo.png",
-  icons: {
-    icon: '/images/MahamayaLawLogo.png',
-    apple: 'images/MahamayaLawLogo.png',
-    shortcut: 'images/MahamayaLawLogo.png', 
-  },
 };
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <Link rel="icon" href="favicon.ico" />
+      </Head>
       <body className={inter.className}>
         <Navbar />
         <Toaster />
