@@ -4,13 +4,13 @@ import '../styles/aboutus.css';
 
 const AboutUs = () => {
   return (
-    <div className="py-12 lg:py-24">
+    <div className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center lg:space-x-12">
+        <div className="flex flex-col md:flex-row items-start md:space-x-16">
           {/* Image Section */}
-          <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+          <div className="w-full lg:w-2/5 mb-8 lg:mb-0 flex justify-center">
             <img
-              className="w-3/4 h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+              className="w-1/3 sm:w-1/3 md:w-4/5 lg:w-4/5 max-w-xs md:max-w-sm lg:max-w-md h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
               src="images/MahamayaLawLogo.png"
               alt="About Us"
             />
@@ -18,13 +18,13 @@ const AboutUs = () => {
 
           {/* Text Section */}
           <div className="w-full lg:w-1/2">
-          <div className="heading">
-            <h2
-              className="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl mb-6 tracking-tight"
-              style={{ fontFamily: "Cormorant Garamond', serif" }}
-            >
-               About Mahamaya Law
-            </h2>
+            <div className="about-heading sm:mt-0 md:mt-4 lg:mt-8">
+              <h2
+                className="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl mb-6 tracking-tight"
+                style={{ fontFamily: "Cormorant Garamond', serif" }}
+              >
+                About Mahamaya Law
+              </h2>
             </div>
             <p
               className="text-lg text-gray-700 sm:text-xl lg:text-lg leading-relaxed mb-4"
