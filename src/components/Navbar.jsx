@@ -44,6 +44,7 @@ const Navbar = () => {
             <Link className="nav-item mx-5" href="/">Home</Link>
             <Link className="nav-item mx-5" href="/aboutus">About Us</Link>
             <Link className="nav-item mx-5" href="/blogs">Blogs</Link>
+            <Link className="nav-item mx-5" href="/careers">Careers</Link>
             <Link className="nav-item mx-5" href="/contactus">Contact Us</Link>
             {/* <Link className="nav-item mr-4" href="/adminlogin">Admin</Link> */}
           </div>
@@ -55,6 +56,7 @@ const Navbar = () => {
             <Link className="nav-item p-4" href="/" onClick={() => setIsOpen(false)}>Home</Link>
             <Link className="nav-item p-4" href="/aboutus" onClick={() => setIsOpen(false)}>About Us</Link>
             <Link className="nav-item p-4" href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
+            <Link className="nav-item p-4" href="/careers" onClick={() => setIsOpen(false)}>Careers</Link>
             <Link className="nav-item p-4" href="/contactus" onClick={() => setIsOpen(false)}>Contact Us</Link>
             {/* <Link className="nav-item p-4" href="/adminlogin" onClick={() => setIsOpen(false)}>Admin</Link> */}
           </div>
