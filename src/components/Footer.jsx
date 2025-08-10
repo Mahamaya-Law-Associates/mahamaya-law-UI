@@ -43,7 +43,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between">
           {/* Branding */}
           <div className="mb-8 md:mb-0">
-            <h3 className="text-white text-2xl font-bold mb-2">Mahamayaß Law</h3>
+            <h3 className="text-white text-2xl font-bold mb-2">Mahamaya Law</h3>
             <p className="text-gray-400 max-w-xs">
               Excellence in legal services with a commitment to client trust and integrity.
             </p>
@@ -75,7 +75,7 @@ const Footer = () => {
         {/* Bottom Row */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {year} Mahāmāyā Law. All rights reserved.
+            © {year} Mahamaya Law. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a
