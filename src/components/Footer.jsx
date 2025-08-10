@@ -43,7 +43,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between">
           {/* Branding */}
           <div className="mb-8 md:mb-0">
-            <h3 className="text-white text-2xl font-bold mb-2">Mahāmāyā Law</h3>
+            <h3 className="text-white text-2xl font-bold mb-2">Mahamayaß Law</h3>
             <p className="text-gray-400 max-w-xs">
               Excellence in legal services with a commitment to client trust and integrity.
             </p>
@@ -54,10 +54,10 @@ const Footer = () => {
             {linksColumn('About', [
               { name: 'Our Firm', url: '/aboutus' },
               { name: 'Practice Areas', url: '/#practice-areas' },
-              { name: 'Careers', url: '/' }
+              { name: 'Careers', url: '/careers' }
             ])}
             {linksColumn('Blog', [
-              { name: 'Legal Insights', url: '/blogs' },
+              { name: 'Legal Insights', url: '/contactus' },
               { name: 'Latest Updates', url: '/blogs' },
               { name: 'Subscribe', url: '/blogs' }
             ])}
