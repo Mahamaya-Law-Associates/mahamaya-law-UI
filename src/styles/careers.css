@@ -1,0 +1,70 @@
+.careers {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.hero {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+.about {
+  margin-bottom: 3rem;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.openings h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.job {
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.job h3 {
+  margin-top: 0;
+}
+
+.applyBtn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #004085;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.applyBtn:hover {
+  background-color: #002752;
+}

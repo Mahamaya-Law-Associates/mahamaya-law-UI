@@ -96,7 +96,28 @@ const BlogDetails = () => {
     <div className="bg-gray-50 pb-24 px-16">
       <div className="mx-auto flex items-start justify-around py-20">
         <div className="rounded-lg w-11/12 lg:w-7/12">
-          <div className="text-3xl font-bold mb-6" style={{ fontFamily: "Cormorant Garamond, serif" }}>{blog.title}</div>
+          {/* Blog Header Section bg-[#002B5B] */}
+          <div className="bg-slate-800 text-gray-50 rounded-md overflow-hidden flex flex-col lg:flex-row justify-between items-start lg:items-center p-6 mb-10">
+            <div className="flex-1">
+              <p className="text-sm font-light mb-2">
+                Posted On - {blog.date || "Unknown Date"} &nbsp;•&nbsp; By - {blog.author || "Mahamaya Law"}
+              </p>
+              <h1 className="text-3xl font-bold leading-tight" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+                {blog.title}
+              </h1>
+            </div>
+            {blog.image && (
+              <div className="mt-4 lg:mt-0 lg:ml-6">
+                <img
+                  src={blog.image.startsWith('data:image') ? blog.image : `data:image/jpeg;base64,${blog.image}`}
+                  alt="Blog Visual"
+                  className="w-72 h-44 object-cover rounded-md border border-white shadow"
+                />
+              </div>
+            )}
+          </div>
+
+          {/* <div className="text-3xl font-bold mb-6" style={{ fontFamily: "Cormorant Garamond, serif" }}>{blog.title}</div> */}
           <hr className="mb-10" />
           <div
             className="text-gray-700 text-lg"
