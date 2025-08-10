@@ -75,7 +75,7 @@ const Footer = () => {
         {/* Bottom Row */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {year} Mahāmāyā Law. All rights reserved.
+            © {year} Mahamaya Law. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a
