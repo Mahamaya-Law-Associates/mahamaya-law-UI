@@ -25,7 +25,7 @@ export default function Careers() {
                     {/* Job 1 */}
                     <div className="bg-white shadow-md rounded-lg p-6 mb-6 border border-gray-200">
                         <h3 className="text-xl font-semibold mb-2">Associate Attorney</h3>
-                        <p className="text-sm text-gray-600 mb-2"><strong>Location:</strong> New York, NY (Hybrid)</p>
+                        <p className="text-sm text-gray-600 mb-2"><strong>Location:</strong> Lucknow, Uttar Pradesh • On-Site</p>
                         <p className="mb-4">Seeking a licensed attorney with 2+ years of litigation experience. Strong writing and courtroom skills required.</p>
                         <a href="mailto:careers@yourlawfirm.com" className="inline-block bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
                             Apply Now
@@ -35,7 +35,7 @@ export default function Careers() {
                     {/* Job 2 */}
                     <div className="bg-white shadow-md rounded-lg p-6 mb-6 border border-gray-200">
                         <h3 className="text-xl font-semibold mb-2">Legal Assistant</h3>
-                        <p className="text-sm text-gray-600 mb-2"><strong>Location:</strong> On-Site</p>
+                        <p className="text-sm text-gray-600 mb-2"><strong>Location:</strong> New Delhi • On-Site</p>
                         <p className="mb-4">Support attorneys with document preparation, research, and communication. Legal experience preferred.</p>
                         <a href="mailto:careers@yourlawfirm.com" className="inline-block bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
                             Apply Now
@@ -45,7 +45,7 @@ export default function Careers() {
                     {/* Job 2 */}
                     <div className="bg-white shadow-md rounded-lg p-6 mb-6 border border-gray-200">
                         <h3 className="text-xl font-semibold mb-2">Legal Assistant 2</h3>
-                        <p className="text-sm text-gray-600 mb-2"><strong>Location:</strong> On-Site</p>
+                        <p className="text-sm text-gray-600 mb-2"><strong>Location:</strong> New Delhi • On-Site</p>
                         <p className="mb-4">Support attorneys with document preparation, research, and communication. Legal experience preferred.</p>
                         <a href="mailto:careers@yourlawfirm.com" className="inline-block bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
                             Apply Now
@@ -55,7 +55,7 @@ export default function Careers() {
                     {/* Job 2 */}
                     <div className="bg-white shadow-md rounded-lg p-6 mb-6 border border-gray-200">
                         <h3 className="text-xl font-semibold mb-2">Legal Assistant 3</h3>
-                        <p className="text-sm text-gray-600 mb-2"><strong>Location:</strong> On-Site</p>
+                        <p className="text-sm text-gray-600 mb-2"><strong>Location:</strong> New Delhi • On-Site</p>
                         <p className="mb-4">Support attorneys with document preparation, research, and communication. Legal experience preferred.</p>
                         <a href="mailto:careers@yourlawfirm.com" className="inline-block bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
                             Apply Now

@@ -54,10 +54,10 @@ const Footer = () => {
             {linksColumn('About', [
               { name: 'Our Firm', url: '/aboutus' },
               { name: 'Practice Areas', url: '/#practice-areas' },
-              { name: 'Careers', url: '/' }
+              { name: 'Careers', url: '/careers' }
             ])}
             {linksColumn('Blog', [
-              { name: 'Legal Insights', url: '/blogs' },
+              { name: 'Legal Insights', url: '/contactus' },
               { name: 'Latest Updates', url: '/blogs' },
               { name: 'Subscribe', url: '/blogs' }
             ])}
