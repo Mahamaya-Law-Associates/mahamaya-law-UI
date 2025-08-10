@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           {/* Link Columns */}
-          <div className="flex flex-wrap space-x-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {linksColumn('About', [
               { name: 'Our Firm', url: '/aboutus' },
               { name: 'Practice Areas', url: '/#practice-areas' },
