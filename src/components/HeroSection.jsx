@@ -16,23 +16,34 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="description relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-48 flex flex-col items-center ">
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white text-center lg:text-left shadow-lg">
-          Tailored Legal Advice
-          <br />
-          <span className="block text-black-00">Your Rights, Our Focus</span>
-        </h1>
-        <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-gray-300 text-center lg:text-left max-w-lg lg:max-w-none">
-          Mahamaya law is here to guide you through every legal hurdle. With a
+      <div className="description relative max-w-[1600px] mx-auto pe-4 sm:px-6 lg:pe-8 py-24 lg:py-48 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-4">
+        <Image
+          src="/images/MahamayaLawnobg.png"
+          alt="Mahamaya Law"
+          width={400}
+          height={400}
+          className="h-96 w-96 object-contain shrink-0 shadow-sm"
+        />
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+          <h1
+            className="text-4xl sm:text-5xl lg:text-5xl font-bold text-gray-100"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Mahamaya Law
+          </h1>
+          <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-gray-300">
+            Your Rights, Our Focus
+          </p>
+          <a
+            href="/aboutus"
+            className="mt-10 inline-block bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-600 hover:to-gray-700 text-white text-lg font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300"
+          >
+            Learn More About Us
+          </a>
+          {/* <p>Mahamaya law is here to guide you through every legal hurdle. With a
           client-first approach, we ensure your case receives the attention it
-          deserves to secure the best possible outcome.
-        </p>
-        <a
-          href="#"
-          className="mt-10 inline-block bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-600 hover:to-gray-700 text-white text-lg font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300"
-        >
-          Learn More About Us
-        </a>
+          deserves to secure the best possible outcome.</p> */}
+        </div>
       </div>
     </div>
   );

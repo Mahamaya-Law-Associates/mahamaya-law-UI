@@ -42,29 +42,55 @@ const Footer = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex flex-col md:flex-row justify-between">
           {/* Branding */}
-          <div className="mb-8 md:mb-0">
-            <h3 className="text-white text-2xl font-bold mb-2">Mahamaya Law</h3>
-            <p className="text-gray-400 max-w-xs">
-              Excellence in legal services with a commitment to client trust and integrity.
-            </p>
+          <div className="mb-8 md:mb-0 flex flex-col md:flex-row md:items-center me-6">
+            <div>
+              <div  className='flex flex-row'>
+                <h3 className="text-white text-2xl font-bold mb-2">Mahamaya Law</h3>
+                <div className="block w-px self-stretch bg-gray-600/40 mx-6" />
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://www.linkedin.com/company/mahamaya-law/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <svg className="h-6 w-6 fill-current" viewBox="0 0 448 512">
+                      <path d="M100.28 448H7.4V148.9h92.88zM53.79 106.5C24.09 106.5 0 82.4 0 52.9a53.79 53.79 0 0 1 107.58 0c0 29.5-24.1 53.6-53.79 53.6zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="mailto:Mahamayalaw@gmail.com"
+                    className="text-gray-400 hover:text-white transition-colors"
+                    aria-label="Email"
+                  >
+                    <svg className="h-6 w-6 fill-current" viewBox="0 0 512 512">
+                      <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+              <p className="text-gray-400 max-w-xs mt-2">
+                Excellence in legal services with a commitment to client trust and integrity.
+              </p>
+            </div>
           </div>
 
           {/* Link Columns */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {linksColumn('About', [
               { name: 'Our Firm', url: '/aboutus' },
-              { name: 'Practice Areas', url: '/#practice-areas' },
-              { name: 'Careers', url: '/careers' }
+              { name: 'Practice Areas', url: '/#practice-areas' }
             ])}
             {linksColumn('Blog', [
-              { name: 'Legal Insights', url: '/contactus' },
               { name: 'Latest Updates', url: '/blogs' },
-              { name: 'Subscribe', url: '/blogs' }
             ])}
             {linksColumn('Legal', [
-              { name: 'Privacy Policy', url: '/privacy' },
-              { name: 'Terms of Service', url: '/terms' },
-              { name: 'Contact Us', url: '/contact' }
+              { name: 'Contact Us', url: '/contactus' }
+            ])}
+            {linksColumn('Join Us', [
+              { name: 'Careers', url: '/careers' }
             ])}
           </div>
         </div>

@@ -6,25 +6,32 @@
 }
 
 .all-services-card {
-  width: 300px;
+  width: 380px;
+  flex-shrink: 0;
   border: 1px solid #f1f1f1;
-}
-
-.service-description {
   @media screen and (max-width: 768px) {
     width: 100%;
   }
-  @media screen and (min-width: 768px) {
-    width: 65vw;
-  }
-  
+}
+
+.service-description {
+  flex: 1 1 0%;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 96px;
 }
 
 .services {
   color: #777777;
+  font-size: 1.125rem;
 }
 .services:hover {
   color: #212121;
+}
+.desc {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #4b5563;
 }
 .about-heading{
   font-size: 3rem;
