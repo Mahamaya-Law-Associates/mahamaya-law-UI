@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /adminlogin
+Disallow: /adminblog
+
+Sitemap: https://mahamayalaw.in/sitemap.xml

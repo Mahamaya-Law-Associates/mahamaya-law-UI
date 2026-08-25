@@ -7,40 +7,58 @@ import "slick-carousel/slick/slick-theme.css";
 
 const cardsData = [
   {
-    title: "Corporate and Commercials",
+    title: "Litigation",
     description:
-      "We provide specialized legal advice for corporate clients, handling everything from case evaluations and motion filings to court representation and appellate management. Whether it's mergers, acquisitions, or general business contracts, we ensure a smooth legal process from start to finish.",
+      "Representing clients in civil, commercial, and constitutional disputes before trial courts, High Courts, and the Supreme Court of India, from case assessment through trial and appeal. We combine meticulous legal research with strong courtroom advocacy to secure favourable outcomes efficiently.",
+    image: "images/Litigation.jpeg",
+  },
+  {
+    title: "Intellectual Property Rights",
+    description:
+      "End-to-end IPR services covering trademarks, copyrights, and patents — from filing and prosecution to licensing, enforcement, and anti-counterfeiting action. We help clients turn their ideas into durable, protected business value.",
+    image: "images/Intellectual%20Property%20Law%20Images.webp",
+  },
+  {
+    title: "Employment and Labour Laws",
+    description:
+      "Advising employers and employees on contracts, POSH compliance, workplace investigations, terminations, and disputes before labour courts and tribunals. Our goal is fair, compliant workplaces where individuals can assert their rights effectively.",
+    image: "images/Employment%20and%20Labor%20Law%20Image.jpeg",
+  },
+  {
+    title: "Corporate, Merger & Acquisition and Compliance",
+    description:
+      "Supporting businesses through incorporation, governance, and complex transactions — including M&A due diligence, deal structuring, and regulatory compliance. We work closely with management and boards to align every transaction with broader business strategy.",
     image: "images/corporate.jpeg",
   },
   {
-    title: "Dispute Resolution",
+    title: "Dispute Resolution & Arbitration",
     description:
-      "Our dispute resolution services focus on achieving fair outcomes through arbitration, mediation, and litigation. We assist in crafting effective agreements, representing you in legal proceedings, and enforcing arbitration awards to ensure your interests are protected.",
+      "Domestic and international arbitration, mediation, and conciliation — from drafting arbitration clauses to enforcing awards before Indian courts. We help clients reach efficient, enforceable outcomes tailored to their commercial context.",
     image: "images/dispute.png",
   },
   {
-    title: "Information Technology",
+    title: "Matrimonial Laws",
     description:
-      "Our team offers comprehensive consulting on all aspects of IT, from company formation to mergers and acquisitions. We provide expertise in contract drafting, corporate restructuring, software licensing, data privacy, and cybersecurity, ensuring your technological assets are legally protected and optimized.",
-    image: "images/information_technology.jpg",
-  },
-  {
-    title: "Insolvency and Bankruptcy",
-    description:
-      "Our insolvency and bankruptcy services provide expert legal support during restructuring, liquidation, and creditor claims. We assist businesses and individuals in navigating complex financial difficulties, ensuring compliance with regulations and protection of rights throughout the process.",
-    image: "images/Insolvency.jpg",
-  },
-  {
-    title: "Matrimonial Matters",
-    description:
-      "We provide expert legal counsel in matrimonial disputes, including divorce, child custody, and spousal support. Our services include negotiation and representation, with a focus on creating equitable agreements that safeguard your rights and future.",
+      "Handling divorce, maintenance, child custody, and matrimonial property disputes with discretion, empathy, and support for mutual settlement. Our priority is protecting our clients' rights and the wellbeing of any children involved.",
     image: "images/matrimonial.jpg",
   },
   {
     title: "White Collar Crimes",
     description:
-      "Our team specializes in defending clients involved in white-collar crimes such as fraud, embezzlement, and insider trading. We handle complex investigations, develop strategic defenses, and guide clients through every phase of legal proceedings to achieve the best possible outcome.",
+      "Defending individuals and corporations in fraud, money laundering, and corruption matters, from investigation and bail through to trial. We combine careful strategic counsel with discreet representation to protect our clients' liberty and standing.",
     image: "images/whitecollar.jpg",
+  },
+  {
+    title: "Competition Law",
+    description:
+      "Advising on Competition Act compliance, merger filings before the CCI, antitrust risk audits, and representation in CCI and NCLAT proceedings. We help businesses structure commercial arrangements that remain compliant while pursuing growth.",
+    image: "images/Competition%20Law%20Image%20Mar%2017%202018.jpg",
+  },
+  {
+    title: "Privacy Laws & Data Protection",
+    description:
+      "Helping organizations build compliant data governance under the DPDP Act — privacy policies, consent frameworks, breach response, and audits. Our aim is to help clients manage personal data responsibly and build user trust.",
+    image: "images/Data-Privacy-Laws.webp",
   },
 ];
 
@@ -50,7 +68,7 @@ const Card = ({ title, description, image }) => {
   return (
 
     
-    <div className="card" id="practice-areas">
+    <div className="card">
       <img src={image} alt={title} className="card-image" />
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
@@ -87,7 +105,7 @@ const Cards = () => {
   };
 
   return (
-    <div className="container-card">
+    <div className="container-card" id="practice-areas">
        <div className="heading">
       <h2>Our Services</h2>
     </div>

@@ -26,7 +26,10 @@ const ContactUs = () => {
             Call Us:
           </p>
           <p className="text-gray-800 font-semibold">
-            <a href="tel:+918869990580">+91 8869990580</a>
+            <a href="tel:+918869990580" className="hover:text-indigo-600 hover:underline transition-colors duration-200">+91 8869990580</a>
+          </p>
+          <p className="text-gray-800 font-semibold mt-2">
+            <a href="tel:+918260176453" className="hover:text-indigo-600 hover:underline transition-colors duration-200">+91 82601 76453</a>
           </p>
         </div>
 
@@ -52,14 +55,14 @@ const ContactUs = () => {
           <img src="https://img.icons8.com/?size=100&id=z5fB0FkTx33n&format=png&color=000000" alt="" />
           <h3 className="text-2xl font-bold text-indigo-700 mb-3">Address</h3>
           <p className="text-gray-500 mb-4">
-            Visit our office at the address below:
+            Visit us at either of our offices:
           </p>
           <p className="text-gray-800 font-semibold">
-            551/250 Jai Prakash Nagar, Alambagh, Lucknow, 226005
+            <span className="text-indigo-700">Lucknow:</span> 551/250 Jai Prakash Nagar, Alambagh, Lucknow - 226005
           </p>
-          {/* <p className="mt-6 text-gray-800 font-semibold">
-              304, Block B, Sector-62, Noida, Delhi NCR
-            </p> */}
+          <p className="text-gray-800 font-semibold mt-3">
+            <span className="text-indigo-700">Delhi NCR:</span> B-304, PMO Apartments, Sector 62, Noida - 201309
+          </p>
         </div>
       </div>
     </div>
