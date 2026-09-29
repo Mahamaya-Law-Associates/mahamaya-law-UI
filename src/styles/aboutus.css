@@ -32,6 +32,7 @@
   font-size: 1.125rem;
   line-height: 1.75;
   color: #4b5563;
+  white-space: pre-line;
 }
 .about-heading{
   font-size: 3rem;
