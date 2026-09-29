@@ -25,6 +25,12 @@ const cardsData = [
     image: "images/Employment%20and%20Labor%20Law%20Image.jpeg",
   },
   {
+    title: "POSH Compliance & Training",
+    description:
+      "Advising organisations on POSH Act compliance — Internal Committee constitution, policy drafting and review, statutory documentation, and complaint handling. We also run awareness programmes for employees and specialised training for IC members to foster safe, respectful workplaces.",
+    image: "images/POSH%20Training.jpeg",
+  },
+  {
     title: "Corporate, Merger & Acquisition and Compliance",
     description:
       "Supporting businesses through incorporation, governance, and complex transactions — including M&A due diligence, deal structuring, and regulatory compliance. We work closely with management and boards to align every transaction with broader business strategy.",
@@ -84,9 +90,16 @@ const Cards = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
+      {
+        breakpoint: 1980,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {

@@ -16,7 +16,7 @@ export const metadata = {
     template: "%s | Mahamaya Law",
   },
   description:
-    "Mahamaya Law is a full-service law firm with offices in Lucknow and Delhi NCR, offering expert legal counsel in litigation, intellectual property rights, employment and labour law, corporate and M&A, dispute resolution and arbitration, matrimonial law, white collar crime defence, competition law, and data protection.",
+    "Mahamaya Law is a full-service law firm with offices in Lucknow and Delhi NCR, offering expert legal counsel in litigation, intellectual property rights, employment and labour law, POSH compliance and training, corporate and M&A, dispute resolution and arbitration, matrimonial law, white collar crime defence, competition law, and data protection.",
   keywords: [
     "Mahamaya Law",
     "law firm in Lucknow",
@@ -24,7 +24,6 @@ export const metadata = {
     "law firm in Delhi",
     "law firm in Noida",
     "advocates in Delhi NCR",
-    "law firm in Noida",
     "best lawyers in India",
     "best lawyers in Delhi",
     "litigation lawyer Lucknow",
@@ -34,6 +33,13 @@ export const metadata = {
     "intellectual property rights lawyer",
     "trademark and patent attorney India",
     "employment and labour law advisor",
+    "POSH compliance",
+    "POSH Act 2013 lawyer",
+    "POSH training for employees",
+    "Internal Committee training",
+    "POSH policy drafting",
+    "POSH compliance Lucknow",
+    "POSH compliance Delhi NCR",
     "corporate law firm India",
     "corporate law firm Delhi",
     "corporate law firm Noida",
@@ -60,14 +66,14 @@ export const metadata = {
     siteName: "Mahamaya Law",
     title: "Mahamaya Law | Advocates & Legal Consultants in Lucknow & Delhi NCR",
     description:
-      "Full-service legal counsel in litigation, IPR, corporate & M&A, arbitration, matrimonial law, white collar crime, competition law, and data protection.",
+      "Full-service legal counsel in litigation, IPR, POSH compliance & training, corporate & M&A, arbitration, matrimonial law, white collar crime, competition law, and data protection.",
     images: ["/images/MahamayaLawLogo.png"],
   },
   twitter: {
     card: "summary",
     title: "Mahamaya Law | Advocates & Legal Consultants in Lucknow & Delhi NCR",
     description:
-      "Full-service legal counsel in litigation, IPR, corporate & M&A, arbitration, matrimonial law, white collar crime, competition law, and data protection.",
+      "Full-service legal counsel in litigation, IPR, POSH compliance & training, corporate & M&A, arbitration, matrimonial law, white collar crime, competition law, and data protection.",
     images: ["/images/MahamayaLawLogo.png"],
   },
   robots: {
