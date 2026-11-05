@@ -42,7 +42,7 @@ const ContactUs = () => {
             Just send us your questions or concerns, and we will get back to you promptly.
           </p>
           <a
-            href="mailto:Mahamayalaw@gmail.com"
+            href="mailto:info@mahamayalaw.in"
             className="mt-6 px-6 py-3 inline-block text-base font-semibold rounded-full text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300"
           >
             Email Us
